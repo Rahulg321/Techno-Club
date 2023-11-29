@@ -1,7 +1,20 @@
 import TeamCard from '@/components/teamCard/TeamCard';
 import MemberCard from '@/components/memberCard/MemberCard';
 
-const MeetTeam = () => {
+import {
+  getExecutiveMembers,
+  getMembers,
+} from '@/firebase/getExecutiveMembers';
+
+const MeetTeam = async () => {
+  const executiveMembers = await getExecutiveMembers();
+
+  const [facultyTeam, developmentTeam, socialTeam] = await Promise.all([
+    getMembers('Faculty'),
+    getMembers('Development'),
+    getMembers('Social'),
+  ]);
+
   return (
     <>
       <section className="big-container">
@@ -10,51 +23,33 @@ const MeetTeam = () => {
       </section>
 
       <section className="big-container">
-        <TeamCard />
-        <TeamCard />
-        <TeamCard />
-        <TeamCard />
-        <TeamCard />
-        <TeamCard />
+        {executiveMembers.map((e) => {
+          return <TeamCard key={e.memberId} {...e} />;
+        })}
       </section>
 
       <section className="narrow-container">
+        <h2 className="heading">Faculty Team</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {facultyTeam.map((e) => {
+            return <MemberCard key={e.memberId} {...e} />;
+          })}
+        </div>
+      </section>
+      <section className="narrow-container">
         <h2 className="heading">Social Media Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {socialTeam.map((e) => {
+            return <MemberCard key={e.memberId} {...e} />;
+          })}
         </div>
       </section>
       <section className="narrow-container">
-        <h2 className="heading">Business Development Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-        </div>
-      </section>
-      <section className="narrow-container">
-        <h2 className="heading">Community Representatives</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
+        <h2 className="heading">Development Team</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {developmentTeam.map((e) => {
+            return <MemberCard key={e.memberId} {...e} />;
+          })}
         </div>
       </section>
     </>

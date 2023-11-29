@@ -1,10 +1,8 @@
-import Link from 'next/link';
+import { getPreviousEvents } from '@/firebase/getEvents';
 import EventCard from '@/components/eventCard/EventCard';
-import { getCurrentEvents } from '@/firebase/getEvents';
 
-const Events = async () => {
-  const events = await getCurrentEvents();
-  console.log('events', events);
+const page = async () => {
+  const events = await getPreviousEvents();
 
   return (
     <div className="grid grid-cols-1 gap-8">
@@ -15,4 +13,4 @@ const Events = async () => {
   );
 };
 
-export default Events;
+export default page;
