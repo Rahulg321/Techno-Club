@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="mt-10">
         <p>
           Made with ❤ by{' '}
-          <Link href="" className="link">
+          <Link href="" className="link" data-tool-tip="Go to rahul">
             @rahulgupta
           </Link>
         </p>

@@ -2,6 +2,7 @@ const About = () => {
   return (
     <>
       <section className="narrow-container">
+        <h1 className="heading">About us</h1>
         <p>
           The Techno Club at PCTE Group of Institutes is a dynamic and
           innovative community of tech enthusiasts dedicated to empowering the

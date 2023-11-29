@@ -23,50 +23,58 @@ export default function Home() {
           </div>
 
           <div className="p-8">
-            <Image src={heroImg} alt="programming image of my hero section" />
+            <Image
+              src={heroImg}
+              alt="programming image of my hero section"
+              priority
+            />
           </div>
         </div>
       </section>
 
       <section className="big-container">
+        <h2 className="text-center mb-4">Our Goals</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <div className="px-12 py-6 flex flex-col justify-between bg-static rounded-md">
+          <div className="px-4 py-6 gap-4 flex flex-col justify-between bg-static rounded-md">
             <Image
               src={videoUpload}
               alt="illustration of a video"
-              className="mb-4"
+              className=""
             />
-            <h4>Saves time</h4>
+            <h4>Innovation.</h4>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Laboriosam error fugiat ea eum fugit consequuntur debitis, magni
-              quibusdam exercitatio
+              At Techno Club, we wholeheartedly embrace innovation as a core
+              value. We believe in pushing the boundaries of what's possible in
+              the world of technology. Innovation is not just a buzzword for us;
+              it's a way of life.
             </p>
           </div>
-          <div className="px-12 py-6 flex flex-col justify-between bg-static rounded-md">
+          <div className="px-4 py-6 gap-4 flex flex-col justify-between bg-static rounded-md">
             <Image
               src={videoUpload}
               alt="illustration of a video"
-              className="mb-4"
+              className=""
             />
-            <h4>Saves time</h4>
+            <h4>Collaboration.</h4>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Laboriosam error fugiat ea eum fugit consequuntur debitis, magni
-              quibusdam exercitatio
+              Collaboration is at the heart of everything we do. We understand
+              that the most significant achievements in technology are rarely
+              accomplished alone. As a community, we foster a spirit of teamwork
+              and camaraderie.
             </p>
           </div>
-          <div className="px-12 py-6 flex flex-col justify-between bg-static rounded-md">
+          <div className="px-4 py-6 gap-4 flex flex-col justify-between bg-static rounded-md">
             <Image
               src={videoUpload}
               alt="illustration of a video"
-              className="mb-4"
+              className=""
             />
-            <h4>Saves time</h4>
+            <h4>Inclusivity.</h4>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Laboriosam error fugiat ea eum fugit consequuntur debitis, magni
-              quibusdam exercitatio
+              Inclusivity is one of our foundational principles. We welcome
+              individuals from all backgrounds, experiences, and walks of life.
+              We understand that diversity drives innovation, and our club is a
+              safe, welcoming space for everyone.
             </p>
           </div>
         </div>
@@ -138,8 +146,8 @@ export default function Home() {
       <section className="big-container">
         <div className="text-center">
           <h2>Your journey shouldnt end here</h2>
-          <h4>Follow me on social media to stay tuned on more projects.</h4>
-          <button className="primary-btn">Stay tuned</button>
+          <h4>Subscribe to out newsletter to learn more about us.</h4>
+          <button className="primary-btn">Subscribe</button>
         </div>
       </section>
     </>

@@ -47,8 +47,8 @@ const Header = () => {
               <Link href="/contact" className="py-5 px-3">
                 Contact
               </Link>
-              <Link href="" className="py-5 px-3">
-                Login
+              <Link href="/team" className="py-5 px-3">
+                Team
               </Link>
             </div>
 
@@ -67,6 +67,9 @@ const Header = () => {
 
         {/* mobile menu goes here */}
         <div className={`${toggleHeader ? '' : 'hidden'}`}>
+          <Link href="/" className="block py-3 px-3 text-sm">
+            Home
+          </Link>
           <Link href="/events" className="block py-3 px-3 text-sm">
             Events
           </Link>

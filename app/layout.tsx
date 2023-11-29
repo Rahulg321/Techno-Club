@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { inter, poppins } from './fonts';
+import { inter, outfit } from './fonts';
 import Providers from '@/lib/themeProvider';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={outfit.className}>
         <Providers>
           <main className="bg-background">
             <div className="parent-container">

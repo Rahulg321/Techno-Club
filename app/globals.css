@@ -23,19 +23,19 @@
 
 @layer components {
   h1 {
-    @apply text-3xl mb-4 font-bold md:text-4xl lg:text-6xl md:leading-relaxed;
+    @apply text-3xl  font-bold md:text-4xl lg:text-6xl md:leading-relaxed;
   }
 
   h2 {
-    @apply text-2xl mb-4 font-semibold md:text-3xl lg:text-4xl;
+    @apply text-2xl  font-semibold md:text-3xl lg:text-4xl;
   }
 
   h3 {
-    @apply text-xl mb-4 font-semibold md:text-2xl lg:text-3xl;
+    @apply text-xl  font-semibold md:text-2xl lg:text-3xl;
   }
 
   h4 {
-    @apply text-lg mb-4 font-semibold md:text-xl lg:text-2xl;
+    @apply text-lg  font-semibold md:text-xl;
   }
 
   .narrow-container {
@@ -44,6 +44,10 @@
 
   .big-container {
     @apply w-full max-w-[90%] mx-auto lg:max-w-[70rem];
+  }
+
+  .input-field {
+    @apply py-4 px-2 bg-static text-text;
   }
 
   .link {
@@ -59,12 +63,64 @@
   }
 
   p {
-    @apply text-sm leading-normal md:text-base md:leading-relaxed lg:leading-loose;
+    @apply text-sm leading-normal md:text-base md:leading-relaxed lg:text-lg lg:leading-loose;
   }
 }
 
 section {
-  padding: 5rem 0;
+  padding: 3rem 0;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+a[data-tool-tip] {
+  position: relative;
+}
+
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: var(--primary);
+  padding: 1em 3em;
+  color: var(--background);
+  border-radius: 5px;
+  font-size: 0.6em;
+  white-space: nowrap;
+  bottom: 100%;
+  left: 0;
+  transform: scale(0);
+  transition: transform ease-in 120ms;
+}
+
+a[data-tool-tip]:hover::after {
+  transform: scale(1);
+}
+
+.heading::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  margin-block: auto;
+  margin-top: 0.3em;
+  margin-bottom: 0.8em;
+  display: block;
+  background-color: var(--text);
+}
+
+.border-class {
+  border: 2px solid red;
 }
 
 .parent-container {

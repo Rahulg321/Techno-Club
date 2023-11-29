@@ -1,15 +1,20 @@
 import Image from 'next/image';
 import rahulImg from '@/public/rahul.jpeg';
 import { IoStar } from 'react-icons/io5';
-import Sidebaricon from '../Sidebaricon';
 
-const TestimonialCard = () => {
+interface CardProps {
+  name: string;
+  designation: string;
+  quote: string;
+}
+
+const TestimonialCard = ({ name, designation, quote }: CardProps) => {
   return (
     <div className="bg-static p-8">
       <div className="flex justify-between">
         <div className="flex flex-col">
-          <p>Rahul Gupta</p>
-          <span>Product Designer</span>
+          <p>{name}</p>
+          <span>{designation}</span>
         </div>
         <Image
           src={rahulImg}
@@ -29,10 +34,7 @@ const TestimonialCard = () => {
           <IoStar size="4em" color="var(--accent)" />
         </div>
 
-        <p>
-          "Wow! I love this site. Realtime Colors is all websites at the same
-          time.""
-        </p>
+        <blockquote>{quote}</blockquote>
       </div>
     </div>
   );

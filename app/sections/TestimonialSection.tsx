@@ -9,9 +9,22 @@ const TestimonialSection = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
+        <TestimonialCard
+          name="Harinder Pal Singh"
+          designation="HOD CS"
+          quote="Wow! I love this site. Realtime Colors is all websites at the same
+            time."
+        />
+        <TestimonialCard
+          name="Gurpreet Kaur"
+          designation="Coordinator CS"
+          quote="I had the most fun developing and coordinating on this site."
+        />
+        <TestimonialCard
+          name="Neha Sharma"
+          designation="Club Convener"
+          quote="It feels great to see this club go to great heights."
+        />
       </div>
     </section>
   );

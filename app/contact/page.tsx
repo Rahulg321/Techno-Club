@@ -1,3 +1,6 @@
+
+
+
 const Contact = () => {
   return (
     <section className="big-container">
@@ -11,17 +14,36 @@ const Contact = () => {
 
         <div>
           <form action="" className="flex flex-col gap-3">
-            <input type="text" placeholder="name" required />
-            <input type="email" placeholder="email" required />
-            <input type="text" placeholder="subject" required />
+            <input
+              type="text"
+              placeholder="name"
+              required
+              className="input-field"
+            />
+            <input
+              type="text"
+              placeholder="name"
+              required
+              className="input-field"
+            />
+            <input
+              type="text"
+              placeholder="name"
+              required
+              className="input-field"
+            />
+
             <textarea
               name=""
               id=""
               cols={30}
               rows={10}
+              className="input-field"
               placeholder="your message here"
               required
             ></textarea>
+
+            <button className="primary-btn">Submit</button>
           </form>
         </div>
       </div>
