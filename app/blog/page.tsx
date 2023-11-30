@@ -1,8 +1,6 @@
 import BlogCard from '@/components/blogCard/BlogCard';
 import { getBlogs } from '@/firebase/getBlogs';
 
-export const dynamicParams = true; // true | false,
-
 const Blog = async () => {
   const blogs = await getBlogs();
   console.log(blogs);
