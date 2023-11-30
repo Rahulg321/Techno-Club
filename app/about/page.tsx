@@ -19,29 +19,27 @@ const About = () => {
 
       <section className="narrow-container">
         <h2 className="heading">Our Vision</h2>
+
         <p>
-          <ul>
-            <li>
-              Fostering Innovation: Our vision is to be at the forefront of
-              fostering innovation through code. We believe that innovation is
-              the lifeblood of technology, and by providing a space for
-              creativity, collaboration, and experimentation, we aim to nurture
-              the next generation of tech pioneers.
-            </li>
-            <li>
-              Building a Thriving Community:We envision a close-knit community
-              of students who are passionate about technology. This community
-              will be a safe space for sharing knowledge, solving problems, and
-              inspiring one another to reach new heights in the world of coding.
-            </li>
-            <li>
-              Promoting Collaboration: We believe that the best solutions are
-              often born through collaboration. Our vision is to facilitate
-              collaboration by organizing group projects, workshops, and coding
-              meetups, allowing members to work together, learn from each other,
-              and grow as a team.
-            </li>
-          </ul>
+          Fostering Innovation: Our vision is to be at the forefront of
+          fostering innovation through code. We believe that innovation is the
+          lifeblood of technology, and by providing a space for creativity,
+          collaboration, and experimentation, we aim to nurture the next
+          generation of tech pioneers.
+        </p>
+
+        <p>
+          Building a Thriving Community:We envision a close-knit community of
+          students who are passionate about technology. This community will be a
+          safe space for sharing knowledge, solving problems, and inspiring one
+          another to reach new heights in the world of coding.
+        </p>
+
+        <p>
+          Promoting Collaboration: We believe that the best solutions are often
+          born through collaboration. Our vision is to facilitate collaboration
+          by organizing group projects, workshops, and coding meetups, allowing
+          members to work together, learn from each other, and grow as a team.
         </p>
       </section>
 
@@ -62,40 +60,6 @@ const About = () => {
           beyond the classroom, where students can express their creativity,
           engage in hands-on coding experiences, and interact with like-minded
           individuals.
-        </p>
-      </section>
-
-      <section className="narrow-container">
-        <h2 className="heading">Our Mission</h2>
-
-        <p>
-          <ul>
-            <li>
-              Cultivating a Coding Culture:Our mission is to create a culture
-              where coding is not just a subject, but a way of life. We want to
-              inspire every student to think in algorithms and loops, to see the
-              world through lines of code.
-            </li>
-            <li>
-              Creating Learning Opportunities:We will provide regular coding
-              challenges, tutorials, and resources to enhance the skills of our
-              members. We believe that continuous learning is essential in the
-              fast-paced world of technology.
-            </li>
-            <li>
-              Organizing Tech-Driven Events: Our club will host hackathons,
-              coding competitions, and tech talks that will sharpen
-              problem-solving skills and provide students with a chance to
-              showcase their talents on a larger stage.
-            </li>
-
-            <li>
-              Promoting Inclusivity: We are committed to ensuring that our club
-              is inclusive and welcoming to all, regardless of their level of
-              experience or background. We encourage diversity as it fuels
-              innovation.
-            </li>
-          </ul>
         </p>
       </section>
 
