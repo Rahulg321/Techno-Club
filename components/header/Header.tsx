@@ -37,8 +37,8 @@ const Header = () => {
                 <Link href="/events" className="py-5 px-3">
                   Events
                 </Link>
-                <Link href="/about" className="py-5 px-3">
-                  About
+                <Link href="/team" className="py-5 px-3">
+                  Team
                 </Link>
               </div>
             </div>
@@ -47,8 +47,8 @@ const Header = () => {
               <Link href="/contact" className="py-5 px-3">
                 Contact
               </Link>
-              <Link href="/team" className="py-5 px-3">
-                Team
+              <Link href="/about" className="py-5 px-3">
+                About
               </Link>
             </div>
 

@@ -47,7 +47,7 @@
   }
 
   .input-field {
-    @apply py-4 px-2 bg-static text-text;
+    @apply py-4 px-2 bg-static text-text rounded-md;
   }
 
   .link {

@@ -18,7 +18,7 @@ const About = () => {
       </section>
 
       <section className="narrow-container">
-        <h2>Our Vision</h2>
+        <h2 className="heading">Our Vision</h2>
         <p>
           <ul>
             <li>
@@ -46,7 +46,7 @@ const About = () => {
       </section>
 
       <section className="narrow-container">
-        <h3>Our Story</h3>
+        <h2 className="heading">Our Story</h2>
         <p>
           The journey of the Techno Club began with a vision to create a
           thriving ecosystem where students could explore their passion for
@@ -66,7 +66,7 @@ const About = () => {
       </section>
 
       <section className="narrow-container">
-        <h3>Our Mission</h3>
+        <h2 className="heading">Our Mission</h2>
 
         <p>
           <ul>
@@ -100,7 +100,7 @@ const About = () => {
       </section>
 
       <div className="narrow-container">
-        <h2>Join Us</h2>
+        <h2 className="heading">Join Us</h2>
         <p>
           If you're passionate about technology, coding, and innovation, the
           Techno Club at PCTE Group of Institues is the perfect place for you.
