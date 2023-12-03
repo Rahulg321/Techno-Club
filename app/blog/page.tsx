@@ -1,19 +1,20 @@
-import BlogCard from '@/components/blogCard/BlogCard';
-import { getBlogs } from '@/firebase/getBlogs';
+import { Suspense } from 'react';
+import BlogLists from './BlogLists';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Techno Club Blog',
+  description: 'Get the latest news about our club',
+};
 
 const Blog = async () => {
-  const blogs = await getBlogs();
-  console.log(blogs);
-
   return (
     <section className="big-container">
       <h1 className="heading">The Latest Club News</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogs.map((e) => {
-          return <BlogCard {...e} key={e.blogId} />;
-        })}
-      </div>
+      <Suspense fallback="fetching Blog Posts.......">
+        <BlogLists />
+      </Suspense>
     </section>
   );
 };

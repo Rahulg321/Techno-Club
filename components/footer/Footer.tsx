@@ -3,6 +3,7 @@ import { FaDiscord } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
 import { FaXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
+import Blog from '../../app/blog/page';
 
 const Footer = () => {
   return (
@@ -27,10 +28,10 @@ const Footer = () => {
         <div className="">
           <h3 className="mb-4">Explore</h3>
           <ul className="flex flex-col gap-6">
-            <li>Docs</li>
-            <li>Figma Plugin</li>
-            <li>Dashboard Template</li>
-            <li>Blog Post Template</li>
+            <li>Blog</li>
+            <li>Events</li>
+            <li>Our Team</li>
+            <li>Become a Member</li>
           </ul>
         </div>
 
@@ -39,9 +40,10 @@ const Footer = () => {
 
           <ul className="flex flex-col gap-6">
             <li>Contact us</li>
-            <li>Become a Contributor</li>
+            <li>Become a Member</li>
             <li>LinkedIn</li>
             <li>Instagram</li>
+            <li>Twitter | X</li>
           </ul>
         </div>
       </div>
@@ -53,11 +55,9 @@ const Footer = () => {
             @rahulgupta
           </Link>
         </p>
-        <p>No cookies 🍪 Just colors 🎨 and fonts 🔡</p>
+        <p>No cookies 🍪 Just colors 🎨 and code 💻</p>
         <div className="flex flex-col justify-around">
-          <span>
-            Copyright © 2023 All Rights Reserved. CC BY-NC-ND License.
-          </span>
+          <span>Copyright © 2023 All Rights Reserved.</span>
           <ThemeSwitchButton />
         </div>
       </div>

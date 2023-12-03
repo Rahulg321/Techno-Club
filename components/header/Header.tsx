@@ -1,8 +1,6 @@
 'use client';
 
 import { VscDebugBreakpointLog } from 'react-icons/vsc';
-import Image from 'next/image';
-import logo from '@/public/next.svg';
 import Link from 'next/link';
 import { IoMenuSharp } from 'react-icons/io5';
 import { ImCross } from 'react-icons/im';
@@ -73,14 +71,17 @@ const Header = () => {
           <Link href="/events" className="block py-3 px-3 text-sm">
             Events
           </Link>
-          <Link href="/about" className="block py-3 px-3 text-sm">
-            About
-          </Link>
           <Link href="/blog" className="block py-3 px-3 text-sm">
             Blog
           </Link>
+          <Link href="/about" className="block py-3 px-3 text-sm">
+            Team
+          </Link>
           <Link href="/contact" className="block py-3 px-3 text-sm">
             Contact us
+          </Link>
+          <Link href="/about" className="block py-3 px-3 text-sm">
+            About
           </Link>
         </div>
       </nav>

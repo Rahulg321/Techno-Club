@@ -11,7 +11,6 @@ export type Event = {
 
 export type Blog = {
   blogId: string;
-  cover_img: string;
   title: string;
   written_by: string;
   description: string;

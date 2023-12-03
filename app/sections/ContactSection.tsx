@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import ContactForm from '@/components/ContactForm/ContactForm';
 
 const ContactSection = () => {
   return (
     <section className="big-container">
-      <div className="flex flex-col lg:flex-row gap-4 border-class justify-around">
+      <div className="flex flex-col lg:flex-row gap-4 justify-between">
         <div className="flex flex-col gap-2 items-center justify-center">
           <h1>Lets Chat💻</h1>
           <h2>Introduce Yourself🔥</h2>
@@ -20,40 +21,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="px-4 py-6">
-          <p>Send us a message 🚀</p>
-          <form action="" className="flex flex-col gap-3">
-            <input
-              type="text"
-              placeholder="name"
-              required
-              className="input-field"
-            />
-            <input
-              type="text"
-              placeholder="subject"
-              required
-              className="input-field"
-            />
-            <input
-              type="email"
-              placeholder="email"
-              required
-              className="input-field"
-            />
-
-            <textarea
-              name=""
-              id=""
-              cols={30}
-              rows={5}
-              className="input-field"
-              placeholder="your message here"
-              required
-            ></textarea>
-
-            <button className="primary-btn">Submit</button>
-          </form>
+        <div>
+          <p>Send us a message🚀</p>
+          <ContactForm />
         </div>
       </div>
     </section>

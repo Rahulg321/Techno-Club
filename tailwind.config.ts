@@ -15,6 +15,7 @@ const config: Config = {
       secondary: 'var(--secondary)',
       accent: 'var(--accent)',
       static: 'var(--static)',
+      backdrop: 'var(--backdrop)',
     },
     extend: {
       backgroundImage: {

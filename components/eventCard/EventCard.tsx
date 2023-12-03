@@ -5,7 +5,15 @@ import { Event } from '@/app/types';
 
 import { formatTimestampRange } from '@/lib/formatDate';
 
-const EventCard = (props: Event) => {
+interface EventProps {
+  event_detail: string;
+  event_description: string;
+  event_date: Date;
+  name: string;
+  event_venue: string;
+}
+
+const EventCard = (props: EventProps) => {
   const [viewDetails, setViewDetails] = useState(false);
 
   const formattedDate = props.event_date

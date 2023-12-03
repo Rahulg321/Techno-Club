@@ -9,7 +9,16 @@ const Events = async () => {
   return (
     <div className="grid grid-cols-1 gap-8">
       {events.map((e) => {
-        return <EventCard {...e} key={e.eventId} />;
+        return (
+          <EventCard
+            name={e.name}
+            event_date={e.event_date}
+            event_venue={e.event_venue}
+            event_detail={e.event_detail}
+            event_description={e.event_description}
+            key={e.eventId}
+          />
+        );
       })}
     </div>
   );
