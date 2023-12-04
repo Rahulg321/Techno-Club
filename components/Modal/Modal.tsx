@@ -1,8 +1,8 @@
 import { useRef, useImperativeHandle, forwardRef } from 'react';
 import { createPortal } from 'react-dom';
+import { ImCross } from 'react-icons/im';
 
 interface ModalProps {
-  buttonCaption: string;
   children: React.ReactNode;
 }
 
@@ -11,7 +11,7 @@ export interface ModalRef {
 }
 
 const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
-  { children, buttonCaption }: ModalProps,
+  { children },
   ref
 ) {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -24,13 +24,16 @@ const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
     };
   });
 
-  return (
+  return createPortal(
     <dialog ref={dialog} className=" py-6 px-8 rounded-md shadow-md">
-      {children}
-      <form action="" method="dialog" className="text-right mt-4">
-        <button className="accent-btn ">{buttonCaption}</button>
+      <form method="dialog" className="text-right mb-8">
+        <button className=" ">
+          <ImCross size="20" />
+        </button>
       </form>
-    </dialog>
+      {children}
+    </dialog>,
+    document.getElementById('modal-root') as Element
   );
 });
 

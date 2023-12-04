@@ -43,7 +43,7 @@ const ContactForm = () => {
         required
       ></textarea>
 
-      <SubmitButton />
+      <SubmitButton buttonCaption="Submit"/>
     </form>
   );
 };

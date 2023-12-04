@@ -4,6 +4,7 @@ import { outfit } from './fonts';
 import Providers from '@/lib/themeProvider';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Techno Club',
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        {/* <div id="modal-root"></div> */}
+        <div id="modal-root"></div>
         <Providers>
           <main className="bg-background">
             <div className="parent-container">
@@ -28,6 +29,7 @@ export default function RootLayout({
             </div>
           </main>
         </Providers>
+        <Toaster position='top-right'/>
       </body>
     </html>
   );

@@ -2,12 +2,12 @@
 
 import { useFormStatus } from 'react-dom';
 
-const SubmitButton = () => {
+const SubmitButton = ({ buttonCaption }: { buttonCaption: string }) => {
   const { pending } = useFormStatus();
 
   return (
     <button disabled={pending} className="primary-btn">
-      {pending ? 'Submitting' : 'Submit'}
+      {pending ? 'Submitting' : buttonCaption}
     </button>
   );
 };

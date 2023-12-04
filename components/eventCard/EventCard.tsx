@@ -1,20 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { Event } from '@/app/types';
-
 import { formatTimestampRange } from '@/lib/formatDate';
+import { Event } from '@/app/types';
+import { useRouter } from 'next/navigation'
+ 
 
-interface EventProps {
-  event_detail: string;
-  event_description: string;
-  event_date: Date;
-  name: string;
-  event_venue: string;
-}
-
-const EventCard = (props: EventProps) => {
+const EventCard = (props: Event) => {
   const [viewDetails, setViewDetails] = useState(false);
+  const router = useRouter()
 
   const formattedDate = props.event_date
     ? formatTimestampRange(props.event_date)
@@ -26,7 +20,18 @@ const EventCard = (props: EventProps) => {
     });
   };
 
-  let content = <p>{props.event_detail}</p>;
+  let content = (
+    <>
+      <p>{props.event_detail}</p>
+
+      <div className="flex flex-col md:flex-row gap-8 mt-8">
+        <button onClick={() =>{router.push(`/events/${props.eventId}/register`)}}>Register Now</button>
+        <button className="secondary-btn" onClick={viewDetailHandler}>
+          Show Less
+        </button>
+      </div>
+    </>
+  );
 
   return (
     <div className=" py-4 px-2 lg:py-10 lg:px-8 odd:bg-static odd:border rounded-md flex flex-col justify-around items-start">
@@ -38,12 +43,14 @@ const EventCard = (props: EventProps) => {
 
       {viewDetails && content}
 
-      <button
-        onClick={viewDetailHandler}
-        className="bg-primary px-4 py-2 text-background rounded-md"
-      >
-        View Details
-      </button>
+      {!viewDetails && (
+        <button
+          onClick={viewDetailHandler}
+          className="bg-primary px-4 py-2 text-background rounded-md"
+        >
+          View Details
+        </button>
+      )}
     </div>
   );
 };
