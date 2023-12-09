@@ -12,7 +12,7 @@ const EventRegisterForm = () => {
     const result = UserRegistrationSchema.safeParse(userData);
 
     if (!result.success) {
-      let errorMessage = '';
+      let errorMessage = '+';
       result.error.issues.forEach((issue) => {
         errorMessage =
           errorMessage + issue.path[0] + ': ' + issue.message + '. ';

@@ -1,16 +1,17 @@
-import Image from 'next/image';
 import { ExecutiveMember } from '@/app/types';
+import Image from 'next/image';
 
 const TeamCard = (props: ExecutiveMember) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-16 ">
-      <div className=" px-6 ">
+      <div className="h-64 relative overflow-hidden group">
         <Image
+          alt="some image"
           src={props.member_pic}
-          alt={`$Image of ${props.name} holding the position of Executive ${props.position}`}
-          width={500}
-          height={500}
-          className="rounded-full w-auto h-auto"
+          fill={true}
+          priority
+          //  sizes="90vw"
+          className="object-cover rounded-full group-hover:opacity-75"
         />
       </div>
 

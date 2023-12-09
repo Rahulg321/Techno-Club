@@ -18,6 +18,11 @@ export type Blog = {
   created_at: Date;
 };
 
+export type GalleryImage = {
+  imageId: string;
+  image: string;
+};
+
 export type ExecutiveMember = {
   memberId: string;
   name: string;

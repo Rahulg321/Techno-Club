@@ -48,6 +48,9 @@ const Header = () => {
               <Link href="/about" className="py-5 px-3">
                 About
               </Link>
+              <Link href="/gallery" className="py-5 px-3">
+                Gallery
+              </Link>
             </div>
 
             {/* mobile button goes here */}
@@ -82,6 +85,9 @@ const Header = () => {
           </Link>
           <Link href="/about" className="block py-3 px-3 text-sm">
             About
+          </Link>
+          <Link href="/gallery" className="block py-3 px-3 text-sm">
+            Gallery
           </Link>
         </div>
       </nav>
