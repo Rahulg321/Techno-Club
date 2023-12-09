@@ -20,7 +20,7 @@ export type Blog = {
 
 export type GalleryImage = {
   imageId: string;
-  image: string;
+  image_url: string;
 };
 
 export type ExecutiveMember = {

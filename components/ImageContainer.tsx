@@ -1,21 +1,13 @@
 import Image from 'next/image';
+import { GalleryImage } from '@/app/types';
 
-type ImageContainer = {
-  imageId: string;
-  image: string;
-};
-
-const ImageContainer = (props: ImageContainer) => {
+const ImageContainer = (props: GalleryImage) => {
   return (
-    <div
-      className="h-64 relative bg-static overflow-hidden group"
-      key={props.imageId}
-    >
+    <div className="relative h-64 bg-static overflow-hidden group">
       <Image
         alt="some image"
-        src={props.image}
+        src={props.image_url}
         fill={true}
-        priority
         sizes="90vw"
         className="object-cover rounded-xl group-hover:opacity-75"
       />

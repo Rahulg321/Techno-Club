@@ -10,7 +10,7 @@ const TeamCard = (props: ExecutiveMember) => {
           src={props.member_pic}
           fill={true}
           priority
-          //  sizes="90vw"
+          sizes="calc(90vw - 32px)"
           className="object-cover rounded-full group-hover:opacity-75"
         />
       </div>

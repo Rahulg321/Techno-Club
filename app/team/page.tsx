@@ -30,7 +30,7 @@ const MeetTeam = async () => {
 
       <section className="narrow-container">
         <h2 className="heading">Faculty Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {facultyTeam.map((e) => {
             return <MemberCard key={e.memberId} {...e} />;
           })}
@@ -38,7 +38,7 @@ const MeetTeam = async () => {
       </section>
       <section className="narrow-container">
         <h2 className="heading">Social Media Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {socialTeam.map((e) => {
             return <MemberCard key={e.memberId} {...e} />;
           })}
@@ -46,7 +46,7 @@ const MeetTeam = async () => {
       </section>
       <section className="narrow-container">
         <h2 className="heading">Development Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {developmentTeam.map((e) => {
             return <MemberCard key={e.memberId} {...e} />;
           })}

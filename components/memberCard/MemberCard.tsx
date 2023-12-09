@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Member } from '@/app/types';
-import ImageContainer from '../ImageContainer';
 
 const MemberCard = (props: Member) => {
   return (

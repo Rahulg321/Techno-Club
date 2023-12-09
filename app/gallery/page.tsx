@@ -3,18 +3,19 @@ import ImageContainer from '@/components/ImageContainer';
 
 const Gallery = async () => {
   const fetchedImages = await getImageGallery();
-  console.log(fetchedImages);
 
   return (
-    <section className="big-container py-2 my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section className="big-container ">
       <div className="text-center">
-        <h1>Image Gallery</h1>
-        <h3>View some of our content</h3>
+        <h1>Our Image Gallery</h1>
+        <h4 className="my-4">View some images from our past events</h4>
       </div>
 
-      {fetchedImages.map((e) => (
-        <ImageContainer {...e} />
-      ))}
+      <div className="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        {fetchedImages.map((e) => (
+          <ImageContainer {...e} key={e.imageId} />
+        ))}
+      </div>
     </section>
   );
 };

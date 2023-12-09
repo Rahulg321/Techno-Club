@@ -18,6 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className={outfit.className}>
         <div id="modal-root"></div>
         <Providers>
@@ -29,7 +35,7 @@ export default function RootLayout({
             </div>
           </main>
         </Providers>
-        <Toaster position='top-right'/>
+        <Toaster position="top-center" />
       </body>
     </html>
   );

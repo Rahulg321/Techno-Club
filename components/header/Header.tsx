@@ -77,7 +77,7 @@ const Header = () => {
           <Link href="/blog" className="block py-3 px-3 text-sm">
             Blog
           </Link>
-          <Link href="/about" className="block py-3 px-3 text-sm">
+          <Link href="/team" className="block py-3 px-3 text-sm">
             Team
           </Link>
           <Link href="/contact" className="block py-3 px-3 text-sm">
