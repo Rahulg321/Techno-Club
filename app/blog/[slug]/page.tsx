@@ -3,6 +3,7 @@ import { fetchBlogPost } from '@/firebase/getBlogPost';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import classes from './BlogContent.module.css';
+import { serialize } from 'next-mdx-remote/serialize';
 
 export async function generateStaticParams() {
   const posts = await getBlogs();
@@ -18,6 +19,8 @@ const SingleBlog = async ({ params }: { params: { slug: string } }) => {
   if (!blogPost) {
     return notFound();
   }
+
+  // const mdxSource = await serialize(blogPost.main_content);
 
   return (
     <section className={`narrow-container ${classes['blog-content']}`}>
