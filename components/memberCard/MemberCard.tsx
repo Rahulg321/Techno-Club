@@ -4,13 +4,13 @@ import { Member } from '@/app/types';
 const MemberCard = (props: Member) => {
   return (
     <div>
-      <div className="h-64 relative overflow-hidden group">
+      <div className="h-64 p-4 relative overflow-hidden group">
         <Image
           alt="some image"
           src={props.member_profile_pic}
           fill={true}
           sizes="calc(90vw - 32px)"
-          className="object-cover rounded-xl group-hover:opacity-75"
+          className="object-cover rounded-full group-hover:opacity-75"
         />
       </div>
       <p className="font-bold">{props.member_name}</p>
