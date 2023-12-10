@@ -1,6 +1,8 @@
 import { getPreviousEvents } from '@/firebase/getEvents';
 import EventCard from '@/components/eventCard/EventCard';
 
+export const revalidate = 3600; // revalidate the data at most every hour
+
 const page = async () => {
   const events = await getPreviousEvents();
 

@@ -12,7 +12,7 @@ const ImageContainer = (props: GalleryImage) => {
         src={props.image_url}
         fill={true}
         sizes="90vw"
-        className="object-cover rounded-xl group-hover:opacity-75"
+        className="object-containmd:object-cover rounded-xl group-hover:opacity-75"
       />
     </div>
   );

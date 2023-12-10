@@ -4,7 +4,7 @@ export type Event = {
   event_description: string;
   event_detail: string;
   event_venue: string;
-  currentEvent: boolean;
+  current_event: boolean;
   created_at: Date;
   event_date: Date;
 };
