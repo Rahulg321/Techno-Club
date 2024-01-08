@@ -1,8 +1,11 @@
-'use client';
+"use client";
 
-import SubmitButton from '../SubmitButton/SubmitButton';
-import { sendContactFormEmail } from '@/app/actions';
-import toast from 'react-hot-toast';
+import SubmitButton from "../SubmitButton/SubmitButton";
+import { sendContactFormEmail } from "@/app/actions";
+import toast from "react-hot-toast";
+import { Input, Textarea } from "@nextui-org/react";
+import { CiMail } from "react-icons/ci";
+import { IoPerson } from "react-icons/io5";
 
 const ContactForm = () => {
   return (
@@ -11,37 +14,35 @@ const ContactForm = () => {
         // toast('sending message');
         const response = await sendContactFormEmail(formData);
         if (response.success) {
-          toast.success('successfully send message');
+          toast.success("successfully send message");
         }
+
         if (response.error) {
-          toast.error('Could not send message');
+          toast.error("Could not send message");
         }
       }}
       className="flex flex-col gap-3"
     >
-      <input
+      <Input
         type="text"
-        placeholder="name"
-        name="name"
-        required
-        className="input-field"
+        isRequired
+        fullWidth
+        placeholder="your name"
+        startContent={<IoPerson size="25" />}
       />
-      <input
+      <Input
         type="email"
-        placeholder="email"
-        name="email"
-        required
-        className="input-field"
+        isRequired
+        label="Email"
+        placeholder="you@example.com"
+        startContent={<CiMail size="25" />}
       />
 
-      <textarea
-        name="content"
-        cols={30}
-        rows={5}
-        className="input-field"
-        placeholder="your message here"
-        required
-      ></textarea>
+      <Textarea
+        label="Message"
+        isRequired
+        placeholder="Write your message here"
+      />
 
       <SubmitButton buttonCaption="Submit" />
     </form>

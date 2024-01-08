@@ -23,9 +23,10 @@
   }
 }
 
+
 @layer components {
   h1 {
-    @apply text-3xl  font-bold md:text-4xl lg:text-6xl md:leading-relaxed;
+    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
   }
 
   h2 {
@@ -41,44 +42,31 @@
   }
 
   .narrow-container {
-    @apply w-full max-w-[90%] mx-auto lg:max-w-[50rem];
+    @apply w-full max-w-[90%] mx-auto lg:max-w-[62rem];
   }
 
   .big-container {
     @apply w-full max-w-[90%] mx-auto lg:max-w-[70rem];
   }
 
-  .input-field {
-    @apply py-4 px-2 bg-static text-text rounded-md;
-  }
-
-  .link {
-    @apply text-accent font-semibold  hover:font-bold  hover:underline;
-  }
-
-  .primary-btn {
-    @apply bg-primary rounded-md py-4 px-8 text-background;
-  }
-
-  .secondary-btn {
-    @apply bg-secondary rounded-md py-4 px-8 text-text;
-  }
-  .accent-btn {
-    @apply bg-accent rounded-md py-4 px-8 text-text;
-  }
-
   p {
-    @apply leading-relaxed text-base md:leading-relaxed lg:text-lg lg:leading-loose;
+    @apply leading-relaxed text-text text-base lg:text-lg lg:leading-loose;
   }
 }
+
+/* html {
+  font-family: var(--font-montserrat);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-playfair_display);
+} */
 
 section {
   padding: 3rem 0;
-}
-
-img {
-  width: auto;
-  height: auto;
 }
 
 blockquote::before {
@@ -87,30 +75,6 @@ blockquote::before {
 
 blockquote::after {
   content: close-quote;
-}
-
-a[data-tool-tip] {
-  position: relative;
-}
-
-a[data-tool-tip]::after {
-  content: attr(data-tool-tip);
-  display: block;
-  position: absolute;
-  background-color: var(--primary);
-  padding: 1em 3em;
-  color: var(--background);
-  border-radius: 5px;
-  font-size: 0.6em;
-  white-space: nowrap;
-  bottom: 100%;
-  left: 0;
-  transform: scale(0);
-  transition: transform ease-in 120ms;
-}
-
-a[data-tool-tip]:hover::after {
-  transform: scale(1);
 }
 
 .heading::after {
@@ -122,10 +86,6 @@ a[data-tool-tip]:hover::after {
   margin-bottom: 0.8em;
   display: block;
   background-color: var(--text);
-}
-
-.border-class {
-  border: 2px solid red;
 }
 
 .parent-container {

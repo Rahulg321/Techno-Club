@@ -1,9 +1,9 @@
-import ThemeSwitchButton from '../ThemeButton/ThemeButton';
-import { FaDiscord } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa6';
-import { FaXTwitter } from 'react-icons/fa6';
-import Link from 'next/link';
-import Blog from '../../app/blog/page';
+import ThemeSwitchButton from "../ThemeButton/ThemeButton";
+import { FaDiscord } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import Link from "next/link";
+import Blog from "../../app/blog/page";
 
 const Footer = () => {
   return (
@@ -50,7 +50,7 @@ const Footer = () => {
 
       <div className="mt-10">
         <p>
-          Made with ❤ by{' '}
+          Made with ❤ by{" "}
           <Link href="" className="link" data-tool-tip="Go to rahul">
             @rahulgupta
           </Link>

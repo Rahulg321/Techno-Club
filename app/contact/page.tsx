@@ -1,9 +1,9 @@
-import ContactSection from '../sections/ContactSection';
-import type { Metadata } from 'next';
+import ContactSection from "../sections/ContactSection";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Contact us',
-  description: 'Contact us for any future enquiries',
+  title: "Contact us",
+  description: "Contact us for any future enquiries",
 };
 
 const Contact = () => {

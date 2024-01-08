@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { ThemeProvider } from 'next-themes';
+import React, { useState, useEffect } from "react";
+import { ThemeProvider } from "next-themes";
+import { NextUIProvider } from "@nextui-org/react";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   const [mounted, setMounted] = useState(false);
@@ -15,8 +16,8 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     return <>{children}</>;
   }
   return (
-    <ThemeProvider enableSystem={false} attribute="class">
-      {children}
+    <ThemeProvider enableSystem attribute="class">
+      <NextUIProvider>{children}</NextUIProvider>
     </ThemeProvider>
   );
 };
