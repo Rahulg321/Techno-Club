@@ -3,7 +3,6 @@ import { FaDiscord } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-import Blog from "../../app/blog/page";
 
 const Footer = () => {
   return (
