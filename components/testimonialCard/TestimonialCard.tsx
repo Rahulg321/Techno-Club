@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import rahulImg from '@/public/rahul.jpeg';
-import { IoStar } from 'react-icons/io5';
+import Image from "next/image";
+import rahulImg from "@/public/rahul.jpeg";
+import { IoStar } from "react-icons/io5";
 
 interface CardProps {
   name: string;
@@ -16,13 +16,6 @@ const TestimonialCard = ({ name, designation, quote }: CardProps) => {
           <p>{name}</p>
           <span>{designation}</span>
         </div>
-        <Image
-          src={rahulImg}
-          width={50}
-          height={50}
-          alt="photo of website maker"
-          className="rounded-full"
-        />
       </div>
 
       <div className="mt-4">

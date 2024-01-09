@@ -5,6 +5,18 @@ export type Event = {
   _createdAt: Date;
   name: string;
   slug: string;
-  image: string;
+  eventDate: Date;
+  content: PortableTextBlock[];
+};
+
+export type Blog = {
+  _id: string;
+  _createdAt: Date;
+  title: string;
+  slug: string;
+  category: {
+    name: string;
+  };
+  author: string;
   content: PortableTextBlock[];
 };

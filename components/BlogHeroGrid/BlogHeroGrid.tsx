@@ -4,7 +4,7 @@ import React from "react";
 const BlogHeroGrid = () => {
   return (
     <div className="gap-6 grid sm:grid-cols-1 md:grid-cols-3 md:grid-rows-5">
-      <Card className="row-span-5 h-auto border hover:opacity-75 ">
+      <Card className="row-span-5 h-auto border hover:opacity-75 hover:scale-105 transition">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Programming
@@ -20,7 +20,7 @@ const BlogHeroGrid = () => {
           src="https://images.unsplash.com/photo-1704587422648-43f456047a72?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </Card>
-      <Card className="row-span-2 h-auto border hover:opacity-75">
+      <Card className="row-span-2 h-auto border hover:opacity-75 hover:scale-105 transition">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">Travel</p>
           <h4 className="text-white font-medium text-large">
@@ -34,7 +34,7 @@ const BlogHeroGrid = () => {
           src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </Card>
-      <Card className="row-span-3 h-auto border hover:opacity-75">
+      <Card className="row-span-3 h-auto border hover:opacity-75 hover:scale-105 transition">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Engineering
@@ -50,7 +50,7 @@ const BlogHeroGrid = () => {
           src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </Card>
-      <Card className="row-span-3 h-auto border hover:opacity-75">
+      <Card className="row-span-3 h-auto border hover:opacity-75 hover:scale-105 transition">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Community
@@ -68,7 +68,7 @@ const BlogHeroGrid = () => {
       </Card>
       <Card
         isFooterBlurred
-        className="row-span-2 h-auto border hover:opacity-75"
+        className="row-span-2 h-auto border hover:opacity-75 hover:scale-105 transition"
       >
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">Events</p>

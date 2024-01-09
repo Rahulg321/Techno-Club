@@ -1,34 +1,45 @@
 import GridSection from "../sections/GridSection";
 import Image from "next/image";
 import heroImg from "@/public/hero-img.svg";
-import innovate from "@/public/innovation.svg";
-import inclusive from "@/public/inclusive.svg";
-import collab from "@/public/pairCode.svg";
 import Link from "next/link";
 import TestimonialSection from "../sections/TestimonialSection";
 import FaqSection from "../sections/FaqSection";
+import { Button } from "@nextui-org/react";
+import PeopleOnline from "@/public/people-collaborating-online.png";
+import PersonWatching from "@/public/personWatching.png";
 
 export default function Home() {
   return (
     <>
-      <section className="big-container lg:min-h-screen  ">
-        <div className="flex flex-col-reverse lg:flex-row ">
-          <div className="flex-1">
-            <h1> PCTE Techno Club</h1>
-            <p>Explore the world of technology with us!</p>
+      <section className="big-container lg:min-h-[80vh]">
+        <div className="flex flex-col-reverse md:flex-row ">
+          <div className="flex-1 flex flex-col md:justify-center items-center md:items-start">
+            <h1>
+              PCTE{" "}
+              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+                Techno Club
+              </span>
+            </h1>
+            <p className="my-2">Explore the world of technology with us!</p>
             <p>Join our community to learn, collaborate, and innovate.</p>
 
-            <Link href="/team">
-              <button className="secondary-btn">Join now</button>
-            </Link>
-            <Link href="/events">
-              <button className="primary-btn">Discover Events</button>
-            </Link>
+            <div className="mt-2">
+              <Link href="/contact">
+                <Button className="bg-primary" variant="shadow">
+                  Contact us
+                </Button>
+              </Link>
+              <Link href="/events">
+                <Button className="bg-secondary ml-2" variant="shadow">
+                  Discover Events
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="flex-1">
             <Image
-              src={heroImg}
+              src={PeopleOnline}
               alt="programming image of my hero section"
               priority
             />
@@ -40,7 +51,11 @@ export default function Home() {
         <h2 className="text-center mb-4">Our Goals</h2>
         <div className="flex gap-4 flex-col md:flex-row">
           <div className="px-4 py-6 bg-static rounded-md flex-1">
-            <Image src={innovate} alt="illustration of a video" className="" />
+            <Image
+              src={PersonWatching}
+              alt="illustration of a video"
+              className=""
+            />
             <h4>Innovation.</h4>
             <p>
               At Techno Club, we wholeheartedly embrace innovation as a core
@@ -50,7 +65,11 @@ export default function Home() {
             </p>
           </div>
           <div className="px-4 py-6 bg-static rounded-md flex-1">
-            <Image src={innovate} alt="illustration of a video" className="" />
+            <Image
+              src={PeopleOnline}
+              alt="illustration of a video"
+              className=""
+            />
             <h4>Innovation.</h4>
             <p>
               At Techno Club, we wholeheartedly embrace innovation as a core
@@ -60,7 +79,11 @@ export default function Home() {
             </p>
           </div>
           <div className="px-4 py-6 bg-static rounded-md flex-1">
-            <Image src={innovate} alt="illustration of a video" className="" />
+            <Image
+              src={PeopleOnline}
+              alt="illustration of a video"
+              className=""
+            />
             <h4>Innovation.</h4>
             <p>
               At Techno Club, we wholeheartedly embrace innovation as a core
