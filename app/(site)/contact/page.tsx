@@ -1,4 +1,4 @@
-import ContactSection from "../sections/ContactSection";
+import ContactSection from "@/app/sections/ContactSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

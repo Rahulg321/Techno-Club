@@ -1,31 +1,26 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import { Tabs, Tab } from "@nextui-org/react";
 
 const EventsNavList = () => {
   const pathname = usePathname();
 
-  const links = [
-    { id: 'l1', href: '/events', name: 'Events' },
-    { id: 'l2', href: '/events/previousEvents', name: 'Previous Events' },
+  const tabs = [
+    { key: "engineering", title: "Current" },
+    { key: "technology", title: "Previous" },
   ];
 
   return (
-    <>
-      {links.map((e) => (
-        <Link
-          href={e.href}
-          key={e.id}
-          className={clsx({
-            underline: pathname === e.href,
-          })}
-        >
-          <h4>{e.name}</h4>
-        </Link>
-      ))}
-    </>
+    <div className="flex flex-wrap gap-4">
+      <Tabs variant="underlined" size="lg" aria-label="Tabs variants">
+        {tabs.map((tab) => {
+          return <Tab key={tab.key} title={tab.title} />;
+        })}
+      </Tabs>
+    </div>
   );
 };
 

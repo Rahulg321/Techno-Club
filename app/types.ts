@@ -1,40 +1,10 @@
+import { PortableTextBlock } from "sanity";
+
 export type Event = {
-  eventId: string;
+  _id: string;
+  _createdAt: Date;
   name: string;
-  event_description: string;
-  event_detail: string;
-  event_venue: string;
-  current_event: boolean;
-  created_at: Date;
-  event_date: Date;
-};
-
-export type Blog = {
-  blogId: string;
-  title: string;
-  written_by: string;
-  description: string;
-  main_content: string;
-  created_at: Date;
-};
-
-export type GalleryImage = {
-  imageId: string;
-  image_url: string;
-};
-
-export type ExecutiveMember = {
-  memberId: string;
-  name: string;
-  member_description: string;
-  position: string;
-  rank: number;
-  member_pic: string;
-};
-
-export type Member = {
-  memberId: string;
-  member_name: string;
-  member_position: string;
-  member_profile_pic: string;
+  slug: string;
+  image: string;
+  content: PortableTextBlock[];
 };

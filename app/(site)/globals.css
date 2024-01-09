@@ -66,8 +66,8 @@ h4 {
 } */
 
 section {
-  padding: 3rem 0;
-}
+  padding-block: min(6vh, 10rem);
+} 
 
 blockquote::before {
   content: open-quote;

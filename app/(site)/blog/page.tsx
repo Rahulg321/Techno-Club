@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import BlogLists from "./BlogLists";
 import type { Metadata } from "next";
 import BlogHeroGrid from "@/components/BlogHeroGrid/BlogHeroGrid";
 import BlogTabs from "@/components/BlogTabs";

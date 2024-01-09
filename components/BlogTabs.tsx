@@ -5,11 +5,8 @@ import { Tabs, Tab } from "@nextui-org/react";
 
 const BlogTabs = () => {
   const tabs = [
-    { key: "all", title: "All" },
     { key: "engineering", title: "Engineering" },
     { key: "technology", title: "Technology" },
-    { key: "jobs", title: "Jobs" },
-    { key: "ai", title: "Artificial Intelligence" },
   ];
 
   return (

@@ -1,34 +1,32 @@
-import GridSection from './sections/GridSection';
-import Image from 'next/image';
-import heroImg from '@/public/hero-img.svg';
-import innovate from '@/public/innovation.svg';
-import inclusive from '@/public/inclusive.svg';
-import collab from '@/public/pairCode.svg';
-import Link from 'next/link';
-import TestimonialSection from './sections/TestimonialSection';
-import FaqSection from './sections/FaqSection';
+import GridSection from "../sections/GridSection";
+import Image from "next/image";
+import heroImg from "@/public/hero-img.svg";
+import innovate from "@/public/innovation.svg";
+import inclusive from "@/public/inclusive.svg";
+import collab from "@/public/pairCode.svg";
+import Link from "next/link";
+import TestimonialSection from "../sections/TestimonialSection";
+import FaqSection from "../sections/FaqSection";
 
 export default function Home() {
   return (
     <>
-      <section className="big-container">
-        <div className="flex flex-col-reverse lg:flex-row lg:justify-between">
-          <div>
-            <h1 className="fs-heading">Welcome to PCTE Techno Club</h1>
+      <section className="big-container lg:min-h-screen  ">
+        <div className="flex flex-col-reverse lg:flex-row ">
+          <div className="flex-1">
+            <h1> PCTE Techno Club</h1>
             <p>Explore the world of technology with us!</p>
             <p>Join our community to learn, collaborate, and innovate.</p>
 
-            <div className="mt-12 flex flex-col md:flex-row gap-3">
-              <Link href="/team">
-                <button className="secondary-btn">Join now</button>
-              </Link>
-              <Link href="/events">
-                <button className="primary-btn">Discover Events</button>
-              </Link>
-            </div>
+            <Link href="/team">
+              <button className="secondary-btn">Join now</button>
+            </Link>
+            <Link href="/events">
+              <button className="primary-btn">Discover Events</button>
+            </Link>
           </div>
 
-          <div className="p-8">
+          <div className="flex-1">
             <Image
               src={heroImg}
               alt="programming image of my hero section"
@@ -38,10 +36,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="big-container">
+      <section className="big-container min-h-[70vh]">
         <h2 className="text-center mb-4">Our Goals</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <div className="px-4 py-6 gap-4 flex flex-col justify-between bg-static rounded-md">
+        <div className="flex gap-4 flex-col md:flex-row">
+          <div className="px-4 py-6 bg-static rounded-md flex-1">
             <Image src={innovate} alt="illustration of a video" className="" />
             <h4>Innovation.</h4>
             <p>
@@ -51,24 +49,24 @@ export default function Home() {
               it's a way of life.
             </p>
           </div>
-          <div className="px-4 py-6 gap-4 flex flex-col justify-between bg-static rounded-md">
-            <Image src={collab} alt="illustration of a video" className="" />
-            <h4>Collaboration.</h4>
+          <div className="px-4 py-6 bg-static rounded-md flex-1">
+            <Image src={innovate} alt="illustration of a video" className="" />
+            <h4>Innovation.</h4>
             <p>
-              Collaboration is at the heart of everything we do. We understand
-              that the most significant achievements in technology are rarely
-              accomplished alone. As a community, we foster a spirit of teamwork
-              and camaraderie.
+              At Techno Club, we wholeheartedly embrace innovation as a core
+              value. We believe in pushing the boundaries of what's possible in
+              the world of technology. Innovation is not just a buzzword for us;
+              it's a way of life.
             </p>
           </div>
-          <div className="px-4 py-6 gap-4 flex flex-col justify-between bg-static rounded-md">
-            <Image src={inclusive} alt="illustration of a video" className="" />
-            <h4>Inclusivity.</h4>
+          <div className="px-4 py-6 bg-static rounded-md flex-1">
+            <Image src={innovate} alt="illustration of a video" className="" />
+            <h4>Innovation.</h4>
             <p>
-              Inclusivity is one of our foundational principles. We welcome
-              individuals from all backgrounds, experiences, and walks of life.
-              We understand that diversity drives innovation, and our club is a
-              safe, welcoming space for everyone.
+              At Techno Club, we wholeheartedly embrace innovation as a core
+              value. We believe in pushing the boundaries of what's possible in
+              the world of technology. Innovation is not just a buzzword for us;
+              it's a way of life.
             </p>
           </div>
         </div>
