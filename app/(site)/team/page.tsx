@@ -1,10 +1,4 @@
-import TeamCard from "@/components/teamCard/TeamCard";
-import MemberCard from "@/components/memberCard/MemberCard";
 import type { Metadata } from "next";
-import {
-  getExecutiveMembers,
-  getMembers,
-} from "@/firebase/getExecutiveMembers";
 
 export const metadata: Metadata = {
   title: "Team Members",
