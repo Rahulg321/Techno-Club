@@ -5,7 +5,9 @@ export type Event = {
   _createdAt: Date;
   name: string;
   slug: string;
-  eventDate: Date;
+  venue: string;
+  eventDate: string;
+  description: string;
   content: PortableTextBlock[];
 };
 

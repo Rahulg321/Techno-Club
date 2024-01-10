@@ -1,7 +1,6 @@
 import EventCard from "@/components/eventCard/EventCard";
 import { getEvents } from "@/sanity/sanity-utils";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -17,9 +16,14 @@ const Events = async () => {
     <>
       {events.map((e) => {
         return (
-          <Link key={e._id} className="" href={`/events/${e.slug}`}>
-            <EventCard key={e._id} title={e.name} createdAt="Jan 24, 2024" />
-          </Link>
+          <EventCard
+            key={e._id}
+            title={e.name}
+            slug={e.slug}
+            eventDate={e.eventDate}
+            venue={e.venue}
+            description={e.description}
+          />
         );
       })}
     </>

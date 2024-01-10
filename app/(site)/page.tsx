@@ -24,16 +24,25 @@ export default function Home() {
             <p>Join our community to learn, collaborate, and innovate.</p>
 
             <div className="mt-2">
-              <Link href="/contact">
-                <Button className="bg-primary" variant="shadow">
-                  Contact us
-                </Button>
-              </Link>
-              <Link href="/events">
-                <Button className="bg-secondary ml-2" variant="shadow">
-                  Discover Events
-                </Button>
-              </Link>
+              <Button
+                as={Link}
+                href="/contact"
+                className=" hover:-translate-y-2 transition"
+                variant="shadow"
+                color="primary"
+              >
+                Contact us
+              </Button>
+
+              <Button
+                color="secondary"
+                as={Link}
+                href="/events"
+                className="ml-2 hover:-translate-y-2 transition"
+                variant="shadow"
+              >
+                Discover Events
+              </Button>
             </div>
           </div>
 

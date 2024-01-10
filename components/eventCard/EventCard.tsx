@@ -1,18 +1,51 @@
-import Link from "next/link";
 import React from "react";
+import formatDate from "@/lib/formatDate";
+import { Button } from "@nextui-org/react";
+import { BsPencilSquare } from "react-icons/bs";
+import EventRegisterButton from "../EventRegisterModal";
+import Link from "next/link";
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 type EventCardProps = {
   title: string;
-  createdAt: string;
+  slug: string;
+  eventDate: string;
+  venue: string;
+  description: string;
 };
 
-const EventCard = ({ title, createdAt }: EventCardProps) => {
+const EventCard = ({
+  title,
+  eventDate,
+  venue,
+  slug,
+  description,
+}: EventCardProps) => {
+  const updatedDate = formatDate(eventDate);
+
   return (
-    <div className="flex flex-col shadow-md p-4 text-pretty hover:scale-110 transition-all mb-8 border rounded-md ">
-      <span className="text-muted underline underline-offset-2">
-        {createdAt}
-      </span>
-      <h3 className="my-2">{title}</h3>
+    <div className="flex flex-col shadow-md px-4 py-6 text-pretty mb-8 bg-static">
+      <h3 className="">{title}</h3>
+      <div className="lg:ml-4 my-4">
+        <span className="">{updatedDate}</span>
+        <span className="ml-4">| {venue}</span>
+      </div>
+      <p>{description}</p>
+      <div className="flex mt-4">
+        <EventRegisterButton EventName={title} />
+
+        <Button
+          as={Link}
+          href={`events/${slug}`}
+          color="secondary"
+          size="lg"
+          radius="lg"
+          startContent={<IoMdAddCircleOutline />}
+          className="ml-4 hover:-translate-y-2 transition"
+        >
+          Learn More
+        </Button>
+      </div>
     </div>
   );
 };

@@ -11,6 +11,9 @@ const EventsNavList = () => {
   const tabs = [
     { key: "engineering", title: "Current" },
     { key: "technology", title: "Previous" },
+    {
+      key:""
+    }
   ];
 
   return (

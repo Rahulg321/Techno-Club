@@ -17,6 +17,18 @@ const event = {
       },
     },
     {
+      name: "description",
+      title: "Description",
+      type: "string",
+    },
+
+    {
+      name: "venue",
+      title: "Venue",
+      type: "string",
+    },
+
+    {
       name: "eventDate",
       title: "Event Date",
       type: "date",

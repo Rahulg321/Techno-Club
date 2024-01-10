@@ -1,11 +1,11 @@
 "use client";
 
-import SubmitButton from "../SubmitButton/SubmitButton";
+import { Button } from "@nextui-org/react";
 import { sendContactFormEmail } from "@/app/actions";
 import toast from "react-hot-toast";
 import { Input, Textarea } from "@nextui-org/react";
-import { CiMail } from "react-icons/ci";
-import { IoPerson } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";
+import { IoMdPerson } from "react-icons/io";
 
 const ContactForm = () => {
   return (
@@ -21,30 +21,40 @@ const ContactForm = () => {
           toast.error("Could not send message");
         }
       }}
-      className="flex flex-col gap-3"
+      className="flex flex-col gap-3 mt-2"
     >
       <Input
-        type="text"
+        autoFocus
         isRequired
-        fullWidth
-        placeholder="your name"
-        startContent={<IoPerson size="25" />}
+        endContent={
+          <IoMdPerson className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+        }
+        label="Name"
+        placeholder="Enter your name"
+        type="text"
+        variant="bordered"
       />
       <Input
-        type="email"
         isRequired
+        endContent={
+          <IoMdMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+        }
         label="Email"
-        placeholder="you@example.com"
-        startContent={<CiMail size="25" />}
+        placeholder="Enter your email address"
+        type="email"
+        variant="bordered"
       />
 
       <Textarea
+        variant="bordered"
         label="Message"
         isRequired
         placeholder="Write your message here"
       />
 
-      <SubmitButton buttonCaption="Submit" />
+      <Button color="primary" className="hover:-translate-y-2 transition">
+        Submit
+      </Button>
     </form>
   );
 };

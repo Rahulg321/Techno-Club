@@ -10,7 +10,9 @@ export async function getEvents(): Promise<Event[]> {
         _createdAt,
         name,
         "slug":slug.current,
-        "image":image.asset->url,
+        eventDate,
+        venue,
+        description,
         content
     }
   `);
@@ -34,21 +36,23 @@ export async function getEvent(eventSlug: string): Promise<Event> {
   return client.fetch(
     groq`
     *[_type == "event" && slug.current == $eventSlug][0]{
-        _id,
-        _createdAt,
-        name,
-        "slug":slug.current,
-        content
+      _id,
+      _createdAt,
+      name,
+      "slug":slug.current,
+      eventDate,
+      venue,
+      description,
+      content
     }
   `,
     {
-      eventSlug: eventSlug,
+      eventSlug,
     }
   );
 }
 
 export async function getBlog(blogSlug: string): Promise<Blog> {
-  console.log(blogSlug);
   return client.fetch(
     groq`
     *[_type == "blog" && slug.current == $blogSlug][0]{
