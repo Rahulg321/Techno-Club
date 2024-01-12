@@ -1,4 +1,6 @@
 import { PortableTextBlock } from "sanity";
+import { z } from "zod";
+import { ContactFormEmailSchema, UserRegistrationSchema } from "./schemas";
 
 export type Event = {
   _id: string;
@@ -22,3 +24,6 @@ export type Blog = {
   author: string;
   content: PortableTextBlock[];
 };
+
+export type UserRegistrationSchemaType = z.infer<typeof UserRegistrationSchema>;
+export type ContactFormEmailSchemaType = z.infer<typeof ContactFormEmailSchema>;

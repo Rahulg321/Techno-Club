@@ -1,43 +1,57 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const UserRegistrationSchema = z.object({
   userId: z.number().optional(),
   phoneNumber: z
-    .number({
-      required_error: 'Phone Number is required',
-      invalid_type_error: 'Phone number must be a number type',
+    .string()
+    .trim()
+    .min(10, {
+      message: "too short for a phone Number",
     })
-    .int()
-    .nonnegative()
-    .lte(10, {
-      message: 'phone number cannot exceed 10 digits',
+    .max(10, {
+      message: "too big for a phone number",
     }),
-  rollNo: z
-    .number({
-      required_error: 'University Roll Number is required',
-      invalid_type_error: 'University Roll number must be a number type',
+  rollNumber: z
+    .string()
+    .trim()
+    .min(2, {
+      message: "too short for a roll Number",
     })
-    .int()
-    .gte(6, {
-      message: 'roll number must be greater then 6 digits',
-    })
-    .nonnegative(),
+    .max(20, {
+      message: "too big for a roll number",
+    }),
   name: z
     .string()
     .trim()
     .min(2, {
-      message: 'too short for a name',
+      message: "too short for a name",
     })
     .max(20, {
-      message: 'name is too big',
+      message: "name is too big",
     }),
-  course: z.enum(['bca', 'mca', 'btech']),
+  course: z.enum(["bca", "mca", "btech"]),
   email: z
     .string()
     .email({
-      message: 'please enter a valid email address',
+      message: "please enter a valid email address",
     })
     .trim(),
 });
 
-type UserRegistrationSchema = z.infer<typeof UserRegistrationSchema>;
+export const ContactFormEmailSchema = z.object({
+  name: z
+    .string({
+      required_error: "please specify a name",
+    })
+    .trim()
+    .min(2, {
+      message: "too short for a name",
+    })
+    .max(20, {
+      message: "name is too big",
+    }),
+  email: z.string().email({
+    message: "enter a valid email address",
+  }),
+  message: z.string(),
+});

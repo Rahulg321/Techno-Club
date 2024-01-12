@@ -13,7 +13,9 @@ const Events = async () => {
   const events = await getEvents();
 
   return (
-    <>
+    <section className="narrow-container">
+      <h1 className="heading">Events</h1>
+
       {events.map((e) => {
         return (
           <EventCard
@@ -26,7 +28,7 @@ const Events = async () => {
           />
         );
       })}
-    </>
+    </section>
   );
 };
 

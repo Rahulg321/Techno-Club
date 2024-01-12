@@ -1,47 +1,44 @@
-'use server';
+"use server";
+import { Resend } from "resend";
+import { UserRegistrationSchema, ContactFormEmailSchema } from "./schemas";
+import ContactFormEmail from "@/email/contact-form-email";
+import { db } from "@/firebase/config";
+import { collection, doc, addDoc, setDoc } from "firebase/firestore";
+import {
+  UserRegistrationSchemaType,
+  ContactFormEmailSchemaType,
+} from "./types";
 
-import React from 'react';
-import { Resend } from 'resend';
-import ContactFormEmail from '@/email/contact-form-email';
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-const resend = new Resend(process.env.RESEND);
+export const RegisterUserForEvent = async (
+  userData: UserRegistrationSchemaType,
+  eventName: string
+) => {
+  // store user info in firstore those who have registered for the event
+  try {
+    const parsedUserData = UserRegistrationSchema.safeParse(userData);
+    console.log("the info provided is valid", parsedUserData);
+    const docRef = await addDoc(collection(db, eventName), parsedUserData.data);
+    console.log("Document written with ID: ", docRef.id);
+    return { success: "registration was successful" };
+  } catch (error) {
+    console.error("Invalid user data:", error);
+    // Return a custom error message or take other appropriate actions
+    return { error: "Invalid user data provided" };
+  }
+};
 
-export const sendContactFormEmail = async (formData: FormData) => {
-  const name = formData.get('name');
-  const email = formData.get('email');
-  const content = formData.get('content');
-
-  if (!name || typeof name !== 'string') {
+export const ContactFormInquiry = async (data: ContactFormEmailSchemaType) => {
+  try {
+    const parsedMessage = ContactFormEmailSchema.safeParse(data);
     return {
-      error: 'please enter a valid name',
+      success: "Your inquiry has been sent successfully",
+    };
+  } catch (error) {
+    console.log("invalid");
+    return {
+      error: "Could not send inquiry",
     };
   }
-  if (!content || typeof content !== 'string') {
-    return {
-      error: 'Invalid message',
-    };
-  }
-
-  if (!email || typeof email !== 'string') {
-    return {
-      error: 'Enter a valid email',
-    };
-  }
-
-  await resend.emails.send({
-    from: 'Contact Form <onboarding@resend.dev>',
-    reply_to: email,
-
-    to: 'rahulguptax14@gmail.com',
-    subject: 'Inquiry from Contact Form',
-    react: React.createElement(ContactFormEmail, {
-      message: content,
-      email,
-      name,
-    }),
-  });
-
-  return {
-    success: 'sent message',
-  };
 };

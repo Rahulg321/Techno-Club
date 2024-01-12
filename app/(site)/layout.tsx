@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css"
-          rel="stylesheet"
+        <meta
+          name="google-site-verification"
+          content="8pP_lJBKWWCw5FpUWOGsVYea4jHoZ4bVNitNrYCI_EU"
         />
       </head>
       <body className={outfit.className}>
