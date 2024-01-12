@@ -1,8 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { IoIosAddCircle } from 'react-icons/io';
-import { GrSubtractCircle } from 'react-icons/gr';
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 interface faqProps {
   question: string;
@@ -10,28 +8,12 @@ interface faqProps {
 }
 
 const Faq = ({ question, answer }: faqProps) => {
-  const [toggle, setToggle] = useState(false);
-
-  const toggleClickHandler = () => {
-    setToggle((prevState) => {
-      return !prevState;
-    });
-  };
-
   return (
-    <div className="bg-secondary lg:w-[40rem] p-4 rounded-md">
-      <div className="flex justify-between">
-        <h4>{question}</h4>
-        <button onClick={toggleClickHandler}>
-          {toggle ? (
-            <GrSubtractCircle size={20} />
-          ) : (
-            <IoIosAddCircle size={20} />
-          )}
-        </button>
-      </div>
-      <div>{toggle && <p>{answer}</p>}</div>
-    </div>
+    <Accordion variant="bordered">
+      <AccordionItem key="1" aria-label="Accordion 1" title={question}>
+        {answer}
+      </AccordionItem>
+    </Accordion>
   );
 };
 

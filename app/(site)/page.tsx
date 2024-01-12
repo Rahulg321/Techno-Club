@@ -157,22 +157,22 @@ export default function Home() {
           </h4>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="bg-static rounded-md p-8 shadow-xl">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="bg-static rounded-md px-4 py-5 shadow-xl">
             <h4>The Future of Artificial Intelligence in Education</h4>
             <p>
               Discover how AI is shaping the education landscape and what it
               means for students.
             </p>
           </div>
-          <div className="bg-static rounded-md p-8 shadow-xl">
+          <div className="bg-static rounded-md px-4 py-5 shadow-xl">
             <h4>Coding Bootcamps: A Pathway to Tech Careers</h4>
             <p>
               Explore the benefits of coding bootcamps and how they can
               kickstart your career in technology.
             </p>
           </div>
-          <div className="bg-static rounded-md p-8 shadow-xl">
+          <div className="bg-static rounded-md px-4 py-5 shadow-xl">
             <h4>The Rise of Cybersecurity: Protecting the Digital Frontier</h4>
             <p>
               Learn about the importance of cybersecurity and its role in

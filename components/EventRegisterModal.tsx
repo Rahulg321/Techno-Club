@@ -27,9 +27,13 @@ import toast from "react-hot-toast";
 import { UserRegistrationSchemaType } from "@/app/types";
 
 export default function EventRegisterButton({
-  EventName,
+  eventName,
+  eventVenue,
+  eventDate,
 }: {
-  EventName: string;
+  eventName: string;
+  eventVenue: string;
+  eventDate: string;
 }) {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const courses = [
@@ -72,7 +76,12 @@ export default function EventRegisterButton({
 
   const onSubmit = async (data: UserRegistrationSchemaType) => {
     // send data to the server
-    const response = await RegisterUserForEvent(data, EventName);
+    const response = await RegisterUserForEvent(
+      data,
+      eventName,
+      eventVenue,
+      eventDate
+    );
     if (response.success) {
       // close the modal after successful registration!!!
       reset();
@@ -106,7 +115,7 @@ export default function EventRegisterButton({
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                <h3 className="underline">{EventName}</h3>
+                <h3 className="underline">{eventName}</h3>
                 Registeration Form
               </ModalHeader>
               <ModalBody>

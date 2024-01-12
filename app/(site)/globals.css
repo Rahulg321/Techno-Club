@@ -40,17 +40,19 @@
     @apply text-lg  font-semibold md:text-xl;
   }
 
-  .narrow-container {
-    @apply w-full max-w-[90%] mx-auto lg:max-w-[62rem];
-  }
-
-  .big-container {
-    @apply w-full max-w-[90%] mx-auto lg:max-w-[70rem];
-  }
-
   p {
     @apply leading-relaxed text-text text-base lg:text-lg lg:leading-loose;
   }
+}
+
+.big-container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.narrow-container {
+  margin-inline: auto;
+  width: min(80%, 55.5rem);
 }
 
 

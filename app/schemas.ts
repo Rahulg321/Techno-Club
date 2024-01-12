@@ -29,7 +29,7 @@ export const UserRegistrationSchema = z.object({
     .max(20, {
       message: "name is too big",
     }),
-  course: z.enum(["bca", "mca", "btech"]),
+  course: z.enum(["bca", "mca", "btech", "mtech", "bcom", "mba"]),
   email: z
     .string()
     .email({

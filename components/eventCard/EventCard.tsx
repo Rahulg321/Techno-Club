@@ -32,7 +32,11 @@ const EventCard = ({
       </div>
       <p>{description}</p>
       <div className="flex mt-4">
-        <EventRegisterButton EventName={title} />
+        <EventRegisterButton
+          eventName={title}
+          eventDate={updatedDate}
+          eventVenue={venue}
+        />
 
         <Button
           as={Link}
